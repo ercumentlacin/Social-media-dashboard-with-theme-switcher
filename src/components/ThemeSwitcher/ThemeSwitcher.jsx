@@ -1,4 +1,5 @@
 import React from "react";
+import "./theme-switcher.css";
 
 const ThemeSwitcher = () => {
   return (

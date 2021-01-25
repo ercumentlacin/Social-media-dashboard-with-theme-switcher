@@ -1,0 +1,37 @@
+.checkbox__container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox__container {
+  position: relative;
+  cursor: pointer;
+}
+.checkbox__container .x {
+  display: block;
+  width: 180px;
+  height: 80px;
+  border: 2px solid #d3d3be;
+  border-radius: 60px;
+  transition: 0.5s;
+}
+.checkbox__container .x:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 7px;
+  left: 7px;
+  box-sizing: border-box;
+  background: #d3d3be;
+  border: 2px solid #d3d3be;
+  border-radius: 40px;
+  transition: 0.5s;
+}
+.checkbox__container :checked ~ .x:before {
+  background: #fe7f2d;
+  border-color: #fe7f2d;
+  transform: translatex(100px);
+}
+.checkbox__container :checked ~ .x {
+  border-color: #fe7f2d;
+}
