@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../../context/ThemeContext";
+import "./cardMd.css";
 
 const CardMd = () => {
+  const { theme } = useContext(ThemeContext);
+  const { bg, topBg, cardBg, text, textWhite, isDark } = theme;
   return (
-    <div className="card-md">
+    <div style={{ backgroundColor: cardBg, color: text }} className="card-md">
       <div className="adress">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
           <path
@@ -13,7 +17,7 @@ const CardMd = () => {
         <span>@nathanf</span>
       </div>
       <p>
-        <strong>1987</strong>
+        <strong style={{ color: textWhite }}>1987</strong>
       </p>
       <p>FOLLOWERS</p>
       <span>12 Today</span>

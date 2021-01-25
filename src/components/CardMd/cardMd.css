@@ -1,0 +1,39 @@
+.card-md {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 17rem;
+  width: 17rem;
+  border-radius: 8px;
+  border-top: 5px solid hsl(208, 92%, 53%);
+  overflow: hidden;
+  margin-top: -5rem;
+  padding-top: 2rem;
+  margin-right: 2rem;
+}
+.adress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adress > svg {
+  margin-right: 0.5rem;
+}
+.adress > svg + span {
+  font-weight: 700;
+}
+.adress + p {
+  margin: 2rem 0;
+}
+.adress + p > strong {
+  font-size: 4rem;
+}
+.adress + p + p {
+  margin-top: 0;
+  letter-spacing: 5px;
+}
+.adress + p + p + span {
+  margin-bottom: 2rem;
+}

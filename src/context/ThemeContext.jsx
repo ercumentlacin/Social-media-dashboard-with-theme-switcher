@@ -20,7 +20,7 @@ export const ThemeProvider = ({ children }) => {
           topBg: "hsl(225, 100%, 98%)",
           cardBg: "hsl(227, 47%, 96%)",
           text: "hsl(228, 12%, 44%)",
-          textWhite: "hsl(228, 12%, 44%)",
+          textWhite: "black",
           toggle: "linear-gradient(hsl(230, 22%, 74%), hsl(230, 22%, 74%))",
         })
       : setTheme({
