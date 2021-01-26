@@ -18,10 +18,10 @@
   align-items: center;
   justify-content: center;
 }
-.adress > svg {
+.adress > img {
   margin-right: 0.5rem;
 }
-.adress > svg + span {
+.adress > img + span {
   font-weight: 700;
 }
 .adress + p {
