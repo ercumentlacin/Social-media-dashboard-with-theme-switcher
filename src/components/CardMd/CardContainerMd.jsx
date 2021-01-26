@@ -13,6 +13,7 @@ const CardContainerMd = () => {
       type={socialMedia.type}
       today={socialMedia.today}
       increase={socialMedia.increase}
+      borderColor={socialMedia.borderColor}
     />
   ));
   return <div className="card-container-md">{getSocialMd}</div>;

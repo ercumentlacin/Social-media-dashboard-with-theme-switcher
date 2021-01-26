@@ -3,14 +3,30 @@ import ThemeContext from "../../context/ThemeContext";
 import "./cardMd.css";
 
 const CardMd = (props) => {
-  const { svg, nickname, followersCount, type, today, increase } = props;
+  const {
+    svg,
+    nickname,
+    followersCount,
+    type,
+    today,
+    increase,
+    borderColor,
+  } = props;
   const { theme } = useContext(ThemeContext);
   const { bg, topBg, cardBg, text, textWhite, isDark } = theme;
   let increaseColor;
   increase ? (increaseColor = "mediumseagreen") : (increaseColor = "indianred");
 
   return (
-    <div style={{ backgroundColor: cardBg, color: text }} className="card-md">
+    <div
+      style={{
+        backgroundColor: cardBg,
+        color: text,
+        borderImageSource: borderColor,
+        borderImageSlice: 1,
+      }}
+      className="card-md"
+    >
       <div className="adress">
         <img width={20} src={svg} alt="social media icon" />
 

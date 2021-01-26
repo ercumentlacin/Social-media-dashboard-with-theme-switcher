@@ -5,6 +5,7 @@ import youtubeSvg from "../assets/images/icon-youtube.svg";
 
 const cardData = [
   {
+    borderColor: "linear-gradient(hsl(208, 92%, 53%),hsl(208, 92%, 53%))",
     increase: true,
     svg: facebookSvg,
     nickname: "@ercumentlacin",
@@ -13,6 +14,8 @@ const cardData = [
     today: 12,
   },
   {
+    borderColor:
+      "linear-gradient(to right, hsl(37, 97%, 70%) , hsl(329, 70%, 58%))",
     increase: true,
     svg: instagramSvg,
     nickname: "@ercumentlacin",
@@ -21,6 +24,7 @@ const cardData = [
     today: 99,
   },
   {
+    borderColor: "linear-gradient(hsl(203, 89%, 53%),hsl(203, 89%, 53%))",
     increase: true,
     svg: twitterSvg,
     nickname: "@ercumentlacin",
@@ -29,6 +33,7 @@ const cardData = [
     today: 1099,
   },
   {
+    borderColor: "linear-gradient(hsl(348, 97%, 39%), hsl(348, 97%, 39%))",
     increase: false,
     svg: youtubeSvg,
     nickname: "ercumentlacin",
