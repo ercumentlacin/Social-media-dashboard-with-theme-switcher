@@ -1,5 +1,4 @@
 .card-md {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,9 +9,14 @@
   border-top: 5px solid;
   overflow: hidden;
   margin-top: -5rem;
-  padding-top: 2rem;
+  padding: 1rem;
   margin-right: 2rem;
   justify-self: center;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+.card-md:hover {
+  filter: contrast(90%);
 }
 .adress {
   display: flex;

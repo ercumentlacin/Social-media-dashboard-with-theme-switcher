@@ -1,3 +1,7 @@
+.card-sm {
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
 .adress,
 .stats {
   box-sizing: border-box;
@@ -5,4 +9,12 @@
   justify-content: space-between;
   padding: 1.2rem 1.5rem;
   align-items: center;
+}
+
+.stats > p {
+  font-size: 2rem;
+}
+
+.card-sm:hover {
+  filter: contrast(90%);
 }
