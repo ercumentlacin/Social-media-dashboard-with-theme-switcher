@@ -9,7 +9,7 @@ const ThemeSwitcher = () => {
   useEffect(() => {
     toggleTheme();
   }, [checked]);
-  console.log(toggle);
+
   return (
     <div className="theme-switch">
       <strong>Dark Mode</strong>

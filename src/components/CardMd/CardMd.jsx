@@ -13,7 +13,7 @@ const CardMd = (props) => {
     borderColor,
   } = props;
   const { theme } = useContext(ThemeContext);
-  const { bg, topBg, cardBg, text, textWhite, isDark } = theme;
+  const { cardBg, text, textWhite } = theme;
   let increaseColor;
   increase ? (increaseColor = "mediumseagreen") : (increaseColor = "indianred");
 

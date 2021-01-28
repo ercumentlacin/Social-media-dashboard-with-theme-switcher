@@ -10,8 +10,9 @@ const CardContainerMd = () => {
   const { theme } = useContext(ThemeContext);
   const { textWhite } = theme;
 
-  const getSocialMd = cardData.map((socialMedia) => (
+  const getSocialMd = cardData.map((socialMedia, index) => (
     <CardMd
+      key={index}
       svg={socialMedia.svg}
       nickname={socialMedia.nickname}
       followersCount={socialMedia.followersCount}
@@ -21,8 +22,9 @@ const CardContainerMd = () => {
       borderColor={socialMedia.borderColor}
     />
   ));
-  const getSocialSm = cardDataSm.map((socialMedia) => (
+  const getSocialSm = cardDataSm.map((socialMedia, index) => (
     <CardSm
+      key={index}
       svg={socialMedia.svg}
       name={socialMedia.name}
       count={socialMedia.count}

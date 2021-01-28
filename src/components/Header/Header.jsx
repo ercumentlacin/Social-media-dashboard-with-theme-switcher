@@ -5,7 +5,7 @@ import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 const Header = () => {
   const { theme } = useContext(ThemeContext);
-  const { bg, topBg, cardBg, text, textWhite, isDark } = theme;
+  const { bg, topBg, text, textWhite } = theme;
   document.body.style.backgroundColor = bg;
 
   return (
