@@ -44,7 +44,6 @@ const cardDataSm = [
     svg: youtubeSvg,
     name: "Likes",
     count: "107",
-    type: "subscribers",
     today: 19,
   },
   {
@@ -52,7 +51,6 @@ const cardDataSm = [
     svg: youtubeSvg,
     name: "Total Views",
     count: "1407",
-    type: "subscribers",
     today: 12,
   },
 ];

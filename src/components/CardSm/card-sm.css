@@ -1,0 +1,8 @@
+.adress,
+.stats {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  align-items: center;
+}

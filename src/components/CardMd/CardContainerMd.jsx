@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./card-container-md.css";
 import CardMd from "./CardMd";
 import cardData from "../../data/cardData";
+import cardDataSm from "../../data/cardDataSm";
+import CardSm from "../CardSm/CardSm";
+import ThemeContext from "../../context/ThemeContext";
 
 const CardContainerMd = () => {
-  const socialMd = ["facebook", "twitter", "instagram", "linkedin"];
+  const { theme } = useContext(ThemeContext);
+  const { textWhite } = theme;
+
   const getSocialMd = cardData.map((socialMedia) => (
     <CardMd
       svg={socialMedia.svg}
@@ -16,7 +21,27 @@ const CardContainerMd = () => {
       borderColor={socialMedia.borderColor}
     />
   ));
-  return <div className="card-container-md">{getSocialMd}</div>;
+  const getSocialSm = cardDataSm.map((socialMedia) => (
+    <CardSm
+      svg={socialMedia.svg}
+      name={socialMedia.name}
+      count={socialMedia.count}
+      today={socialMedia.today}
+      increase={socialMedia.increase}
+    />
+  ));
+  return (
+    <>
+      <div className="card-container-md">{getSocialMd}</div>
+      <h1
+        style={{ color: textWhite, transition: "all 250ms ease-in-out" }}
+        className="brand"
+      >
+        Overview - Today{" "}
+      </h1>
+      <div className="card-container-sm">{getSocialSm}</div>
+    </>
+  );
 };
 
 export default CardContainerMd;
