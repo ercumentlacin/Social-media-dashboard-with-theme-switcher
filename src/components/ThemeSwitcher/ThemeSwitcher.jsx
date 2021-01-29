@@ -8,6 +8,9 @@ const ThemeSwitcher = () => {
   const { toggle } = theme;
   useEffect(() => {
     toggleTheme();
+    console.log(theme);
+    // localStorage.getItem(theme);
+    // localStorage.setItem(theme, theme);
   }, [checked]);
 
   return (
