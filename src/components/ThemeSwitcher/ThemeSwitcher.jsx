@@ -3,8 +3,8 @@ import ThemeContext from "../../context/ThemeContext";
 import "./theme-switcher.css";
 
 const ThemeSwitcher = () => {
-  const [checked, setChecked] = useState(true);
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [checked, setChecked] = useState(theme.name === "dark" ? true : false);
   let { toggle } = theme;
 
   return (

@@ -1,24 +1,32 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 import { darkTheme, lightTheme } from "../data/themes";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [themeStorage, setThemeStorage] = useState(
-    localStorage.setItem("theme", JSON.stringify(darkTheme))
-  );
-  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = JSON.parse(localStorage.getItem("theme"));
+    if (savedTheme) {
+      return savedTheme;
+    } else {
+      return darkTheme;
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(darkTheme));
+  }, []);
 
   const toggleTheme = () => {
     if (theme.name === "dark") {
       // to light
-      setThemeStorage(
-        localStorage.setItem("theme", JSON.stringify(lightTheme))
-      );
-      setTheme(JSON.parse(localStorage.getItem("theme")));
+
+      localStorage.setItem("theme", JSON.stringify(lightTheme));
+
+      setTheme(lightTheme);
     } else {
       // to dark
-      setThemeStorage(localStorage.setItem("theme", JSON.stringify(darkTheme)));
-      setTheme(JSON.parse(localStorage.getItem("theme")));
+      localStorage.setItem("theme", JSON.stringify(darkTheme));
+      setTheme(darkTheme);
     }
   };
   console.log(theme);
