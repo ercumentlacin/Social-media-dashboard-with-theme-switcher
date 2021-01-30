@@ -5,14 +5,13 @@ import "./theme-switcher.css";
 const ThemeSwitcher = () => {
   const [checked, setChecked] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const { toggle } = theme;
+  let { toggle } = theme;
   useEffect(() => {
     toggleTheme();
     console.log(theme);
     // localStorage.getItem(theme);
     // localStorage.setItem(theme, theme);
-  }, [checked]);
-
+  }, [checked]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className="theme-switch">
       <strong>Dark Mode</strong>

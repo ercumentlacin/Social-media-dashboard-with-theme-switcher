@@ -5,6 +5,7 @@ import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 const Header = () => {
   const { theme } = useContext(ThemeContext);
+
   const { bg, topBg, text, textWhite } = theme;
   document.body.style.backgroundColor = bg;
 
