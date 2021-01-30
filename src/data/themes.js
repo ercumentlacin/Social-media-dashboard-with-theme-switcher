@@ -6,7 +6,7 @@ export const darkTheme = {
   cardBg: "hsl(228, 28%, 20%)",
   text: "hsl(228, 34%, 66%)",
   textWhite: "hsl(0, 0%, 100%)",
-  toggle: "linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)",
+  toggle: "linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%))",
 };
 
 export const lightTheme = {

@@ -6,11 +6,6 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(darkTheme);
   const toggleTheme = () => {
     theme.name === "dark" ? setTheme(lightTheme) : setTheme(darkTheme);
-    // localstorage area
-    localStorage.getItem(darkTheme);
-    theme.name === "dark"
-      ? localStorage.setItem(darkTheme, lightTheme)
-      : localStorage.setItem(darkTheme, darkTheme);
   };
 
   const value = {
