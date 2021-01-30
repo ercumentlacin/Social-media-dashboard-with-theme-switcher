@@ -3,10 +3,25 @@ import { darkTheme, lightTheme } from "../data/themes";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(darkTheme);
+  const [themeStorage, setThemeStorage] = useState(
+    localStorage.setItem("theme", JSON.stringify(darkTheme))
+  );
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
+
   const toggleTheme = () => {
-    theme.name === "dark" ? setTheme(lightTheme) : setTheme(darkTheme);
+    if (theme.name === "dark") {
+      // to light
+      setThemeStorage(
+        localStorage.setItem("theme", JSON.stringify(lightTheme))
+      );
+      setTheme(JSON.parse(localStorage.getItem("theme")));
+    } else {
+      // to dark
+      setThemeStorage(localStorage.setItem("theme", JSON.stringify(darkTheme)));
+      setTheme(JSON.parse(localStorage.getItem("theme")));
+    }
   };
+  console.log(theme);
 
   const value = {
     theme,
