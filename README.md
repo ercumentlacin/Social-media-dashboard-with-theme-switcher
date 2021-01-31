@@ -1,5 +1,16 @@
 # Frontend Mentor - Social media dashboard with theme switcher
 
+## Features
+
+- React
+  - Context Api
+  - useState, useEffect
+- JavaScript
+- CSS3 (Pure)
+  - Grid Layout
+- LocalStorage
+- Theme Switch
+
 ![Design preview for the Social media dashboard with theme switcher coding challenge](./src/assets/design/desktop-preview.jpg)
 
 ## Welcome! 👋
